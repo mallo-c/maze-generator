@@ -65,7 +65,7 @@ class Message(BaseModel):
 
 class Update(BaseModel):
     update_id: int
-    message: None|Message
+    message: None|Message = Field(default=None)
 
 @lru_cache
 def get_settings() -> Settings:
